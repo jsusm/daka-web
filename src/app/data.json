@@ -1,0 +1,205 @@
+{
+	"valor": [
+		{
+			"sap": "LM-00000938",
+			"categoria": "TV 85 PULG",
+			"promo": false,
+			"precio": 2610,
+			"descripcion": "TV 85 PULG QLED 4K SMART QN85Q60DA SAMSUNG",
+			"marca": "SAMSUNG",
+			"familia": "Linea Marron",
+			"view": true
+		},
+		{
+			"sap": "LM-00000937",
+			"categoria": "TV 50 PULG",
+			"promo": false,
+			"precio": 785,
+			"descripcion": "TV 50 PULG CRYSTAL 4K UHD SMART CNEGRO UN50DU8000 SAMSUNG",
+			"marca": "SAMSUNG",
+			"familia": "Linea Marron",
+			"view": true
+		},
+		{
+			"sap": "LM-00000880",
+			"categoria": "TV 43 PULG",
+			"promo": false,
+			"precio": 220,
+			"descripcion": "TV 43 PULG FULL HD SMART 43DA23FG DAEWOO",
+			"marca": "DAEWOO",
+			"familia": "Linea Marron",
+			"view": true
+		},
+		{
+			"sap": "LM-00000860",
+			"categoria": "CORNETAS",
+			"promo": false,
+			"precio": 185,
+			"descripcion": "PARTY SPEAKER CBLUETOOTH DOBLE DE 6.5 PULG. DA610P DAEWOO",
+			"marca": "DAEWOO",
+			"familia": "Linea Marron",
+			"view": true
+		},
+		{
+			"sap": "LM-00000830",
+			"categoria": "TV 86 PULG",
+			"promo": false,
+			"precio": 2000,
+			"descripcion": "TV 86 PULG  4K UHD NANOCELL AI THINQ SMART CNEGRO 86NANO77SRA LG",
+			"marca": "LG",
+			"familia": "Linea Marron",
+			"view": true
+		},
+		{
+			"sap": "LM-00000826",
+			"categoria": "TV 65 PULG",
+			"promo": false,
+			"precio": 1150,
+			"descripcion": "TV 65 PULG  4K UHD NANOCELL AI THINQ SMART CNEGRO 65NANO77SRA LG",
+			"marca": "LG",
+			"familia": "Linea Marron",
+			"view": true
+		},
+		{
+			"sap": "LM-00000818",
+			"categoria": "TV 86 PULG",
+			"promo": false,
+			"precio": 3500,
+			"descripcion": "TV 86 PULG QNED LED 4K UHD AI THINQ SMART CNEGRO 86QNED80SRA LG",
+			"marca": "LG",
+			"familia": "Linea Marron",
+			"view": true
+		},
+		{
+			"sap": "LM-00000795",
+			"categoria": "TV 55 PULG",
+			"promo": false,
+			"precio": 1200,
+			"descripcion": "TV 55 PULG LED 4K SMART UHD XR55X90K SONY",
+			"marca": "SONY",
+			"familia": "Linea Marron",
+			"view": true
+		},
+		{
+			"sap": "LM-00000786",
+			"categoria": "TV 75 PULG",
+			"promo": false,
+			"precio": 1900,
+			"descripcion": "TV 75 PULG LED 4K SMART UHD XR75X90K SONY",
+			"marca": "SONY",
+			"familia": "Linea Marron",
+			"view": true
+		},
+		{
+			"sap": "LM-00000784",
+			"categoria": "CORNETAS",
+			"promo": false,
+			"precio": 390,
+			"descripcion": "CORNETA CBLUETOOTH CNEGRO RNC5 LG",
+			"marca": "LG",
+			"familia": "Linea Marron",
+			"view": true
+		},
+		{
+			"sap": "LM-00000783",
+			"categoria": "CORNETAS",
+			"promo": false,
+			"precio": 500,
+			"descripcion": "CORNETA CBLUETOOTH CNEGRO RNC7 LG",
+			"marca": "LG",
+			"familia": "Linea Marron",
+			"view": true
+		},
+		{
+			"sap": "LM-00000782",
+			"categoria": "CORNETAS",
+			"promo": false,
+			"precio": 720,
+			"descripcion": "CORNETA CBLUETOOTH CNEGRO RNC9 LG",
+			"marca": "LG",
+			"familia": "Linea Marron",
+			"view": true
+		},
+		{
+			"sap": "LM-00000768",
+			"categoria": "CORNETAS",
+			"promo": false,
+			"precio": 400,
+			"descripcion": "CORNETA C BLUETOOTH CNEGRO XL5S LG",
+			"marca": "LG",
+			"familia": "Linea Marron",
+			"view": true
+		},
+		{
+			"sap": "LM-00000718",
+			"categoria": "BASES P/ TV",
+			"promo": false,
+			"precio": 150,
+			"descripcion": "BASE PTV DE 47 PULG - 90 PULG MOVIL BO4790M3 BOOST",
+			"marca": "BOOST",
+			"familia": "Linea Marron",
+			"view": true
+		},
+		{
+			"sap": "LM-00000669",
+			"categoria": "BARRAS DE SONIDO",
+			"promo": false,
+			"precio": 500,
+			"descripcion": "BARRA DE SONIDO CSUBWOOFER CNEGRO QP5 LG",
+			"marca": "LG",
+			"familia": "Linea Marron",
+			"view": true
+		},
+		{
+			"sap": "LM-00000659",
+			"categoria": "ACCESORIOS P/TV",
+			"promo": false,
+			"precio": 100,
+			"descripcion": "MARCO PTV 65 PULG VGSCFA65BWBRU SAMSUNG",
+			"marca": "SAMSUNG",
+			"familia": "Linea Marron",
+			"view": true
+		},
+		{
+			"sap": "LM-00000601",
+			"categoria": "BASES P/ TV",
+			"promo": false,
+			"precio": 25,
+			"descripcion": "BASE PTV E820B BARKAN",
+			"marca": "BARKAN",
+			"familia": "Linea Marron",
+			"view": true
+		},
+		{
+			"sap": "LM-00000600",
+			"categoria": "BASES P/ TV",
+			"promo": false,
+			"precio": 15,
+			"descripcion": "BASE PTV E812 BARKAN",
+			"marca": "BARKAN",
+			"familia": "Linea Marron",
+			"view": true
+		},
+		{
+			"sap": "LM-00000572",
+			"categoria": "ACCESORIOS P/TV",
+			"promo": false,
+			"precio": 30,
+			"descripcion": "CONTROL REMOTO MAGIC REMOTE 2020 MR20GA LG",
+			"marca": "LG",
+			"familia": "Linea Marron",
+			"view": true
+		},
+		{
+			"sap": "LM-00000386",
+			"categoria": "CORNETAS",
+			"promo": false,
+			"precio": 120,
+			"descripcion": "CORNETA 12 PULG CBLUETOOTH CNEGRO Y2C HYUNDAI",
+			"marca": "HYUNDAI",
+			"familia": "Linea Marron",
+			"view": true
+		}
+	],
+	"n": 1082
+}
