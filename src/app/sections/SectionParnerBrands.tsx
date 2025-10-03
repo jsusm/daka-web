@@ -1,0 +1,36 @@
+"use client";
+
+import SectionLayout from "@/components/layout/SectionLayout"
+import useEmblaCarousel from "embla-carousel-react";
+import AutoScroll from "embla-carousel-auto-scroll"
+
+const marcas = [
+  "https://tiendasdaka.com/img/marca/ANKER.webp",
+  "https://tiendasdaka.com/img/marca/HYUNDAI.webp",
+  "https://tiendasdaka.com/img/marca/KITCHENAID.webp",
+  "https://tiendasdaka.com/img/marca/OSTER.webp",
+  "https://tiendasdaka.com/img/marca/RIBELLE.webp",
+  "https://tiendasdaka.com/img/marca/SAMSUNG.webp",
+  "https://tiendasdaka.com/img/marca/WHIRLPOOL.webp",
+  "https://tiendasdaka.com/img/marca/XIAOMI.webp",
+]
+
+export default function SectionPartnerBrands() {
+  const [emblaRef] = useEmblaCarousel({
+    dragFree: true,
+    loop: true,
+    duration: 10000,
+  }, [
+    AutoScroll({ playOnInit: true, speed: 1 })
+  ])
+  return (
+    <SectionLayout>
+      <p className="text-2xl text-stone-600 font-medium text-center">Trabajamos con las mejores marcas</p>
+      <div className="embla overflow-hidden" ref={emblaRef}>
+        <div className="embla__container flex">
+          {marcas.map(m => <img className="h-24 rounded-xl embla__slide min-w-0 flex-[0_0_auto] shadow mr-4" src={m} key={m} />)}
+        </div>
+      </div>
+    </SectionLayout>
+  )
+}

@@ -1,5 +1,24 @@
 @import "tailwindcss";
 
+@theme {
+  --animate-marquee: marquee 2s linear infinite;
+
+
+  @keyframes marquee {
+    from {
+      transform: translateX(0);
+    }
+
+    to {
+      transform: translateX(-200%);
+    }
+  }
+}
+
+/* .hover\:pause:hover { */
+/*   animation-play-state: paused; */
+/* } */
+
 :root {
   --background: oklch(97% 0.001 106.424);
   --foreground: #171717;
