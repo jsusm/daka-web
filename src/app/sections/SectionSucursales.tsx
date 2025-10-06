@@ -1,4 +1,5 @@
 "use client";
+import * as motion from 'motion/react-client'
 import SucursalImg1 from '@/assets/images/daka-sucursal.jpg'
 import SucursalImg2 from '@/assets/images/sucursal1.jpg'
 import SucursalImg3 from '@/assets/images/sucursal2.jpg'
@@ -8,6 +9,7 @@ import { useState } from 'react';
 import SectionLayout from "@/components/layout/SectionLayout"
 import { LucideArrowRight } from 'lucide-react';
 import { SectionTitle, SectionTitleLabel, SectionTitleLink } from '@/components/layout/SectionTitle';
+import { AnimatePresence } from 'motion/react';
 
 export default function SectionSucursales() {
 
@@ -56,17 +58,26 @@ export default function SectionSucursales() {
       </SectionTitle>
       <div className='grid lg:grid-cols-5 gap-8 items-center'>
         <div className='lg:col-span-3'>
-          <Image
-            alt="Sucursal daka"
-            src={selectedSucursalImg ?? ''}
-            className='rounded-xl shadow-lg h-[300px] md:h-[500px] object-cover'
-          />
+          <AnimatePresence mode="wait">
+            <motion.div
+              key={selectedSucursalImg?.src}
+              exit={{ opacity: 0 }}
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+            >
+              <Image
+                alt="Sucursal daka"
+                src={selectedSucursalImg ?? ''}
+                className='rounded-xl shadow-lg h-[300px] md:h-[500px] object-cover'
+              />
+            </motion.div>
+          </AnimatePresence>
         </div>
         <ul className='lg:col-span-2 text-stone-900 space-y-4'>
           {sucursales.map((s, idx) => (
             <li key={s.title} >
               <button
-                className={cn(' text-left py-4 px-4 rounded-xl space-y-2 border w-full', s.selected ? 'bg-white shadow-lg border-transparent' : 'border-stone-300')}
+                className={cn(' text-left py-4 px-4 rounded-xl space-y-2 border w-full transition', s.selected ? 'bg-white shadow-lg border-transparent' : 'border-stone-300')}
                 onClick={() => handleSelectSucursal(idx)}
               >
                 <p className='md:text-xl font-medium'>{s.title}</p>

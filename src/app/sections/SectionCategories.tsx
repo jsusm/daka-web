@@ -1,5 +1,8 @@
+"use client";
 import { SectionTitle, SectionTitleLabel, SectionTitleLink } from "@/components/layout/SectionTitle";
 import { LucideTvMinimal, LucideRefrigerator, LucideLampDesk, LucideMonitorSmartphone, LucideArrowRight } from "lucide-react";
+import { stagger, Variants } from "motion";
+import * as motion from 'motion/react-client'
 
 const categories = [
   {
@@ -28,23 +31,50 @@ const categories = [
   }
 ]
 
+const enterVariant: Variants = {
+  hidden: { opacity: 0, y: 8 },
+  visible: {
+    opacity: 1, y: 0, transition: {
+      delayChildren: stagger(0.1),
+      when: 'beforeChildren'
+    }
+  },
+}
+
+const categoriesVariant: Variants = {
+  hidden: { opacity: 0, y: 8 },
+  visible: { opacity: 1, y: 0, },
+}
 export default function SectionCategories() {
   return (
-    <section className="py-12 sm:py-14 lg:py-16">
-      <div className="max-w-6xl mx-auto px-4 space-y-8">
+    <section
+      className="py-12 sm:py-14 lg:py-16"
+    >
+      <motion.div
+        variants={enterVariant}
+        initial='hidden'
+        whileInView='visible'
+        viewport={{ once: true, amount: 0.8 }}
+        className="max-w-6xl mx-auto px-4 space-y-8">
         <SectionTitle>
           <SectionTitleLabel>Consulta Nuestas Categorias</SectionTitleLabel>
           <SectionTitleLink>Ver todas las Categorias </SectionTitleLink>
         </SectionTitle>
-        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6 gap-4 sm:gap-8 flex-wrap">
-          {categories.map(c => (
-            <div className="rounded-xl flex flex-col items-center gap-2 transition-colors group" key={c.name}>
+        <motion.div
+          className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6 gap-4 sm:gap-8 flex-wrap"
+        >
+          {categories.map((c) => (
+            <motion.div
+              variants={categoriesVariant}
+              className="rounded-xl flex flex-col items-center gap-2 transition-colors group"
+              key={c.name}
+            >
               <img src={c.img} alt={c.name} className="aspect-square object-cover rounded-xl border border-stone-300 group-hover:shadow transition shadow-none" />
               <p className="md:text-lg font-medium text-stone-600 group-hover:text-blue-700 transition">{c.name}</p>
-            </div>
+            </motion.div>
           ))}
-        </div>
-      </div>
+        </motion.div>
+      </motion.div>
     </section>
   )
 

@@ -1,12 +1,49 @@
+"use client";
+import * as motion from 'motion/react-client'
 import { SectionTitle, SectionTitleLabel, SectionTitleLink } from "@/components/layout/SectionTitle";
 import { Product } from "@/types";
 import { LucideArrowLeft, LucideArrowRight } from "lucide-react";
+import { enterVariant } from '@/lib/animations';
+import { stagger, Variants } from 'motion';
 
-export function ProductCard({ product }: { product: Product }) {
+const containerVariant: Variants = {
+  hidden: {
+    opacity: 0,
+    y: 8,
+  },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: {
+      duration: 0.2,
+      delay: 0.2,
+      delayChildren: stagger(0.1),
+      when: 'beforeChildren'
+    }
+  }
+}
+const productVariant: Variants = {
+  hidden: {
+    opacity: 0,
+    y: 12
+  },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: {
+      duration: 0.25,
+    }
+  }
+}
+
+export function ProductCard({ product, order }: { product: Product, order?: number }) {
   const currencyFormatter = new Intl.NumberFormat('es', { currency: 'USD', style: "currency", currencyDisplay: "narrowSymbol", })
   const price = currencyFormatter.format(product.precio)
   return (
-    <div className="relative overflow-hidden font-sans rounded-xl bg-white hover:shadow-lg transition group">
+    <motion.div
+      variants={productVariant}
+      className="overflow-hidden font-sans rounded-xl bg-white hover:shadow-lg group"
+    >
       <div className="relative w-full h-64">
         <img className="object-cover w-full h-full rounded-xl group-hover:scale-105 transition-all" src={`https://tiendasdaka.com/img/producto/${product.sap}.webp`} alt={product.descripcion} />
         <div className="bg-radial from-transparent to-transparent hover:to-stone-950/10 absolute inset-0 transition-colors pointer-events-none" />
@@ -28,24 +65,34 @@ export function ProductCard({ product }: { product: Product }) {
           )}
         </div>
       </div>
-    </div>
+    </motion.div >
   );
 }
 
 export default function ProductsSectionPromo(props: { products: Product[], title: string }) {
   return (
     <section className="py-12 sm:py-14 lg:py-16">
-      <div className="mx-auto max-w-7xl px-4">
+      <motion.div
+        variants={containerVariant}
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true }}
+        className="mx-auto max-w-7xl px-4"
+      >
         <SectionTitle>
           <SectionTitleLabel className="sm:text-3xl">{props.title}</SectionTitleLabel>
           <SectionTitleLink>Ver Mas Productos</SectionTitleLink>
         </SectionTitle>
-        <div className="grid grid-cols-1 gap-6 mt-8 sm:grid-cols-2 lg:grid-cols-4 lg:mt-8">
-          {props.products.map((product) => (
-            <ProductCard key={product.sap} product={product} />
+        <motion.div
+          initial={{ opacity: 0, y: 12 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ delayChildren: stagger(2) }}
+          className="grid grid-cols-1 gap-6 mt-8 sm:grid-cols-2 lg:grid-cols-4 lg:mt-8">
+          {props.products.map((product, idx) => (
+            <ProductCard key={product.sap} product={product} order={idx} />
           ))}
-        </div>
-      </div>
+        </motion.div>
+      </motion.div>
     </section>
   );
 }

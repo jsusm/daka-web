@@ -1,3 +1,5 @@
+import * as motion from 'motion/react-client'
+
 export default function HeroSection() {
   return (
     <section>
@@ -8,14 +10,14 @@ export default function HeroSection() {
         />
         <div className="absolute w-full inset-0 bg-gradient-to-r from-blue-800 to-blue-800/40 sm:to-blue-800/20 -z-10" />
         <div className="mx-auto max-w-6xl flex items-center h-full">
-          <div className="flex flex-col px-4 text-white font-sans max-w-3xl gap-2">
-            <p className="text-3xl sm:text-4xl md:text-5xl font-bold">
+          <motion.div className="flex flex-col px-4 text-white font-sans max-w-3xl gap-2">
+            <motion.p initial={{ opacity: 0, y: 8 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5 }} className="text-3xl sm:text-4xl md:text-5xl font-bold">
               La tienda número 1 en venta de electrodomésticos en Venezuela
-            </p>
-            <p className="sm:text-lg text-blue-50">
+            </motion.p>
+            <motion.p initial={{ opacity: 0, y: 8 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5, delay: 0.25 }} className="sm:text-lg text-blue-50">
               Con marcas de respaldo internacional, calidad, variedad y precios insuperables en: tecnología, hogar, casa, lencería y más.¡Entra y descubre lo que tenemos para ti!
-            </p>
-          </div>
+            </motion.p>
+          </motion.div>
         </div>
       </div>
     </section>
