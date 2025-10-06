@@ -3,6 +3,7 @@
 import SectionLayout from "@/components/layout/SectionLayout"
 import useEmblaCarousel from "embla-carousel-react";
 import AutoScroll from "embla-carousel-auto-scroll"
+import { SectionTitleLabel } from "@/components/layout/SectionTitle";
 
 const marcas = [
   "https://tiendasdaka.com/img/marca/ANKER.webp",
@@ -25,7 +26,7 @@ export default function SectionPartnerBrands() {
   ])
   return (
     <SectionLayout>
-      <p className="text-2xl text-stone-600 font-medium text-center">Trabajamos con las mejores marcas</p>
+      <SectionTitleLabel className="text-center">Trabajamos con las mejores marcas</SectionTitleLabel>
       <div className="embla overflow-hidden" ref={emblaRef}>
         <div className="embla__container flex">
           {marcas.map(m => <img className="h-24 rounded-xl embla__slide min-w-0 flex-[0_0_auto] shadow mr-4" src={m} key={m} />)}

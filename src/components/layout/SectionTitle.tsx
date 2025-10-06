@@ -1,3 +1,4 @@
+import { cn } from "@/lib/cn";
 import { LucideArrowRight } from "lucide-react";
 import { PropsWithChildren } from "react";
 
@@ -9,9 +10,9 @@ export function SectionTitle(props: PropsWithChildren) {
 	)
 }
 
-export function SectionTitleLabel(props: PropsWithChildren) {
+export function SectionTitleLabel(props: PropsWithChildren & { className?: string }) {
 	return (
-		<p className="text-xl sm:text-2xl text-stone-900 font-medium">{props.children}</p>
+		<p className={cn("text-xl sm:text-2xl text-stone-900 font-semibold", props.className)}>{props.children}</p>
 	)
 
 }

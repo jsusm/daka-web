@@ -7,6 +7,7 @@ import { cn } from '@/lib/cn';
 import { useState } from 'react';
 import SectionLayout from "@/components/layout/SectionLayout"
 import { LucideArrowRight } from 'lucide-react';
+import { SectionTitle, SectionTitleLabel, SectionTitleLink } from '@/components/layout/SectionTitle';
 
 export default function SectionSucursales() {
 
@@ -42,17 +43,17 @@ export default function SectionSucursales() {
 
   return (
     <SectionLayout>
-      <div className='flex justify-between items-center flex-wrap gap-y-4'>
+      <SectionTitle>
         <div>
-          <p className='text-2xl text-stone-900 font-medium'>
+          <SectionTitleLabel>
             Encuentranos Mas Cerca de Ti
-          </p>
+          </SectionTitleLabel>
           <p className='text-stone-600'>
             Explora nuestras sucursales repartidas a los largo del pais
           </p>
         </div>
-        <p className="text-lg font-medium text-blue-800 flex items-center gap-2">Ver Todas Las Sucursales <LucideArrowRight size={18} /></p>
-      </div>
+        <SectionTitleLink>Ver Todas Las Sucursales</SectionTitleLink>
+      </SectionTitle>
       <div className='grid lg:grid-cols-5 gap-8 items-center'>
         <div className='lg:col-span-3'>
           <Image
