@@ -91,11 +91,11 @@ export default function ProductsSectionPromo() {
   return (
     <section className="py-12 sm:py-14 lg:py-16">
       <div className="mx-auto max-w-7xl px-4">
-        <div className="flex justify-between items-center">
+        <div className="flex justify-between sm:items-center items-start flex-wrap gap-x-8 flex-col sm:flex-row">
           <p className="text-2xl text-stone-600 font-medium text-center lg:text-3xl">Descuentos Imperdibles</p>
           <p className="text-lg font-medium text-blue-800 flex items-center gap-2">Ver Mas Productos <LucideArrowRight size={18} /></p>
         </div>
-        <div className="grid grid-cols-1 gap-6 mt-8 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 lg:mt-8">
+        <div className="grid grid-cols-1 gap-6 mt-8 sm:grid-cols-2 lg:grid-cols-4 lg:mt-8">
           {products.map((product) => (
             <ProductCard key={product.sap} product={product} />
           ))}

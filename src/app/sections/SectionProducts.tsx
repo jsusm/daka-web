@@ -58,7 +58,7 @@ export function ProductCard({ product }: { product: Product }) {
   const currencyFormatter = new Intl.NumberFormat('es', { currency: 'USD', style: "currency", currencyDisplay: "narrowSymbol", })
   const price = currencyFormatter.format(product.precio)
   return (
-    <div className="relative overflow-hidden font-sans rounded-xl hover:shadow-lg transition group border border-stone-300">
+    <div className="relative overflow-hidden font-sans rounded-xl hover:shadow-lg transition group bg-white">
       {product.promo && (
         <div className="absolute top-2 right-2 bg-yellow-500 text-white text-xs font-bold px-2 py-1 rounded-lg">
           Oferta
@@ -66,7 +66,6 @@ export function ProductCard({ product }: { product: Product }) {
       )}
       <div className="relative w-full h-64">
         <img className="object-cover w-full h-full transition-all" src={`https://tiendasdaka.com/img/producto/${product.sap}.webp`} alt={product.descripcion} />
-        <div className="bg-radial from-transparent to-stone-950/5 group-hover:to-transparent absolute inset-0 transition-colors pointer-events-none" />
       </div>
       <div className="p-4">
         <p className="text-stone-500 line-clamp-2 text-sm mb-2">{product.marca}</p>
@@ -90,11 +89,11 @@ export default function ProductsSection() {
   return (
     <section className="py-12 sm:py-14 lg:py-16">
       <div className="mx-auto max-w-7xl px-4">
-        <div className="flex justify-between items-center">
+        <div className="flex justify-between sm:items-center items-start flex-wrap gap-x-8 flex-col sm:flex-row">
           <p className="text-2xl text-stone-600 font-medium text-center lg:text-3xl">Productos pensados para ti</p>
           <p className="text-lg font-medium text-blue-800 flex items-center gap-2">Ver Mas Productos <LucideArrowRight size={18} /></p>
         </div>
-        <div className="grid grid-cols-1 gap-6 mt-8 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 lg:mt-8">
+        <div className="grid grid-cols-1 gap-6 mt-8 sm:grid-cols-2 lg:grid-cols-4 lg:mt-8">
           {products.map((product) => (
             <ProductCard key={product.sap} product={product} />
           ))}
