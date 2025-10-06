@@ -69,8 +69,8 @@ export default function SectionSucursales() {
                 className={cn(' text-left py-4 px-4 rounded-xl space-y-2 border w-full', s.selected ? 'bg-white shadow-lg border-transparent' : 'border-stone-300')}
                 onClick={() => handleSelectSucursal(idx)}
               >
-                <p className='text-xl font-medium'>{s.title}</p>
-                <p className='text-stone-600'>{s.desc} </p>
+                <p className='md:text-xl font-medium'>{s.title}</p>
+                <p className='text-stone-600 text-sm md:text-base'>{s.desc} </p>
                 <p className='text-right text-blue-800'>Ver en Google Maps</p>
               </button>
             </li>
