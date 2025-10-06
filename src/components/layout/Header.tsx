@@ -1,11 +1,13 @@
 import { LucideSearch, LucideShoppingCart, LucideUser } from "lucide-react";
+import Logo from "@/assets/images/logoDaka.webp"
+import Image from "next/image";
 
 export default function Header() {
 	return (
 		<header className="bg-[#ffdd00]">
 			<div className="flex items-center h-20 justify-between mx-auto max-w-6xl px-4">
 				<div>
-					<img className="h-16" src="https://tiendasdaka.com/img/logoF.webp" />
+					<Image alt="Logo de Tiendas Daka" className="h-16 w-auto" src={Logo} />
 				</div>
 				<div className="justify-end hidden sm:flex">
 					<label htmlFor="search" className="w-lg h-11 bg-stone-50 flex items-center px-4 rounded-sm gap-4 border border-transparent">

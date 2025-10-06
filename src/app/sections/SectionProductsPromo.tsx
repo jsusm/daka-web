@@ -3,8 +3,8 @@ import * as motion from 'motion/react-client'
 import { SectionTitle, SectionTitleLabel, SectionTitleLink } from "@/components/layout/SectionTitle";
 import { Product } from "@/types";
 import { LucideArrowLeft, LucideArrowRight } from "lucide-react";
-import { enterVariant } from '@/lib/animations';
 import { stagger, Variants } from 'motion';
+import Image from 'next/image';
 
 const containerVariant: Variants = {
   hidden: {
@@ -36,7 +36,7 @@ const productVariant: Variants = {
   }
 }
 
-export function ProductCard({ product, order }: { product: Product, order?: number }) {
+export function ProductCard({ product }: { product: Product }) {
   const currencyFormatter = new Intl.NumberFormat('es', { currency: 'USD', style: "currency", currencyDisplay: "narrowSymbol", })
   const price = currencyFormatter.format(product.precio)
   return (
@@ -89,7 +89,7 @@ export default function ProductsSectionPromo(props: { products: Product[], title
           transition={{ delayChildren: stagger(2) }}
           className="grid grid-cols-1 gap-6 mt-8 sm:grid-cols-2 lg:grid-cols-4 lg:mt-8">
           {props.products.map((product, idx) => (
-            <ProductCard key={product.sap} product={product} order={idx} />
+            <ProductCard key={product.sap} product={product} />
           ))}
         </motion.div>
       </motion.div>

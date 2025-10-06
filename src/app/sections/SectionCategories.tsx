@@ -69,7 +69,7 @@ export default function SectionCategories() {
               className="rounded-xl flex flex-col items-center gap-2 transition-colors group"
               key={c.name}
             >
-              <img src={c.img} alt={c.name} className="aspect-square object-cover rounded-xl border border-stone-300 group-hover:shadow transition shadow-none" />
+              <img src={c.img} alt={c.name} className="aspect-square object-cover rounded-xl border border-stone-300 group-hover:shadow transition shadow-none w-full" />
               <p className="md:text-lg font-medium text-stone-600 group-hover:text-blue-700 transition">{c.name}</p>
             </motion.div>
           ))}
