@@ -1,3 +1,4 @@
+import { SectionTitle, SectionTitleLabel, SectionTitleLink } from "@/components/layout/SectionTitle";
 import { LucideTvMinimal, LucideRefrigerator, LucideLampDesk, LucideMonitorSmartphone, LucideArrowRight } from "lucide-react";
 
 const categories = [
@@ -31,15 +32,15 @@ export default function SectionCategories() {
   return (
     <section className="py-12 sm:py-14 lg:py-16">
       <div className="max-w-6xl mx-auto px-4 space-y-8">
-        <div className="flex justify-between sm:items-center items-start flex-wrap gap-x-8 flex-col sm:flex-row">
-          <p className="text-2xl text-stone-900 font-medium">Consulta Nuestas Categorias</p>
-          <p className="text-lg font-medium text-blue-800 flex items-center gap-2">Ver todas las Categorias <LucideArrowRight size={18} /></p>
-        </div>
-        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6 gap-8 flex-wrap">
+        <SectionTitle>
+          <SectionTitleLabel>Consulta Nuestas Categorias</SectionTitleLabel>
+          <SectionTitleLink>Ver todas las Categorias </SectionTitleLink>
+        </SectionTitle>
+        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6 gap-4 sm:gap-8 flex-wrap">
           {categories.map(c => (
-            <div className="rounded-xl flex flex-col items-center gap-4 transition-colors group" key={c.name}>
+            <div className="rounded-xl flex flex-col items-center gap-2 transition-colors group" key={c.name}>
               <img src={c.img} alt={c.name} className="aspect-square object-cover rounded-xl border border-stone-300 group-hover:shadow transition shadow-none" />
-              <p className="md:text-xl font-semibold text-stone-900 group-hover:text-blue-700 transition">{c.name}</p>
+              <p className="md:text-lg font-medium text-stone-600 group-hover:text-blue-700 transition">{c.name}</p>
             </div>
           ))}
         </div>
