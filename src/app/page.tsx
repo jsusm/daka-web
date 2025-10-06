@@ -1,6 +1,5 @@
 import { LucideArrowRight, LucideLampDesk, LucideMonitorSmartphone, LucideRefrigerator, LucideSearch, LucideShoppingCart, LucideTvMinimal, Section, UserIcon } from 'lucide-react'
 import Footer from "@/components/layout/Footer";
-import ProductsSection from "./sections/SectionProducts";
 import SectionFeatures from "./sections/SectionFeatures";
 import SectionCategories from "./sections/SectionCategories";
 import HeroSection from "./sections/SectionHero";
