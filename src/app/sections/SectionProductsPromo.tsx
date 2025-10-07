@@ -4,7 +4,6 @@ import { SectionTitle, SectionTitleLabel, SectionTitleLink } from "@/components/
 import { Product } from "@/types";
 import { LucideArrowLeft, LucideArrowRight } from "lucide-react";
 import { stagger, Variants } from 'motion';
-import Image from 'next/image';
 
 const containerVariant: Variants = {
   hidden: {
@@ -42,6 +41,7 @@ export function ProductCard({ product }: { product: Product }) {
   return (
     <motion.div
       variants={productVariant}
+      viewport={{ once: true }}
       className="overflow-hidden font-sans rounded-xl bg-white hover:shadow-lg group"
     >
       <div className="relative w-full h-64">
@@ -88,7 +88,7 @@ export default function ProductsSectionPromo(props: { products: Product[], title
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ delayChildren: stagger(2) }}
           className="grid grid-cols-1 gap-6 mt-8 sm:grid-cols-2 lg:grid-cols-4 lg:mt-8">
-          {props.products.map((product, idx) => (
+          {props.products.map(product => (
             <ProductCard key={product.sap} product={product} />
           ))}
         </motion.div>

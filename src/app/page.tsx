@@ -103,11 +103,11 @@ export default function Home() {
       <main className="font-sans">
         <HeroSection />
         <SectionCategories />
-        <SectionHowToBuy />
         <ProductsSectionPromo products={products} title="Productos Pensados para ti" />
         <SectionPartnerBrands />
         <SectionGanaConDaka />
         <ProductsSectionPromo products={productsPromo} title="Descuentos Imperdibles!" />
+        <SectionHowToBuy />
         <SectionSucursales />
         <SectionDakaBanners />
       </main>

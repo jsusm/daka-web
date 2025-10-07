@@ -26,11 +26,15 @@ export default function SectionPartnerBrands() {
   ])
   return (
     <SectionLayout>
-      <SectionTitleLabel className="text-center">Trabajamos con las mejores marcas</SectionTitleLabel>
-      <div className="embla overflow-hidden" ref={emblaRef}>
-        <div className="embla__container flex">
-          {marcas.map(m => <img className="h-24 rounded-xl embla__slide min-w-0 flex-[0_0_auto] shadow mr-4" src={m} key={m} />)}
+      <SectionTitleLabel className="text-center text-2xl sm:text-3xl">Trabajamos con las mejores marcas</SectionTitleLabel>
+      <div className="relative">
+        <div className="embla overflow-hidden" ref={emblaRef}>
+          <div className="embla__container flex">
+            {marcas.map(m => <img className="h-24 rounded-xl embla__slide min-w-0 flex-[0_0_auto] shadow mr-4" src={m} key={m} />)}
+          </div>
         </div>
+        <div className="absolute inset-0 right-auto w-16 bg-gradient-to-r from-stone-100 to-transparent" />
+        <div className="absolute inset-0 left-auto w-16 bg-gradient-to-l from-stone-100 to-transparent" />
       </div>
     </SectionLayout>
   )
