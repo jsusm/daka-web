@@ -107,9 +107,7 @@ export default function Home() {
         <SectionCategories />
         <ProductsSectionPromo products={products} title="Productos Pensados para ti" />
         <SectionPartnerBrands />
-        <SectionFeatures />
         <SectionGanaConDaka />
-        <SectionCashea />
         <ProductsSectionPromo products={productsPromo} title="Descuentos Imperdibles!" />
         <SectionSucursales />
         <SectionDakaBanners />

@@ -31,7 +31,7 @@ export default function Header() {
 				</label>
 			</div>
 			<nav className="flex justify-center py-2">
-				<ul className="flex gap-4 text-blue-800 font-medium font-sans flex-wrap sm:flex-nowrap justify-center px-4 text-sm sm:text-base">
+				<ul className="flex gap-y-1 gap-x-4 text-blue-800 font-medium font-sans flex-wrap sm:flex-nowrap justify-center px-4 text-sm sm:text-base">
 					<li>
 						Categorias
 					</li>

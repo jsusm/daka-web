@@ -52,13 +52,13 @@ export default function SectionGanaConDaka() {
         viewport={{ once: true, amount: 0.7 }}
         className="bg-blue-950 rounded-2xl overflow-hidden  p-8 relative isolate shadow-2xl"
       >
-        <Image alt="Gana con daka" src={Fondo} className="absolute top-0 left-0 inset-0 -z-10" />
+        <Image alt="Gana con daka" src={Fondo} className="absolute top-0 left-0 object-cover object-top h-full inset-0 -z-10" />
         <div className="absolute top-0 left-0 inset-0 -z-10 bg-gradient-to-t from-blue-950/30 to-transparent" />
         <motion.div className="sm:grid-cols-2 grid items-center" variants={imgVariant}>
           <Image alt="Gana con Daka" src={Banner} className="" />
           <Image alt="Gana con Daka" src={Card} className="scale-90" />
         </motion.div>
-        <motion.p className="text-center text-3xl sm:text-4xl font-extrabold text-white max-w-md mx-auto" variants={textVariant}>
+        <motion.p className="text-center text-2xl sm:text-4xl font-extrabold text-white max-w-md mx-auto" variants={textVariant}>
           Llevate <span className="bg-gradient-to-r from-yellow-400 via-yellow-100 to-yellow-300 bg-clip-text text-transparent">$5000</span> En tus productos Favoritos
         </motion.p>
       </motion.div>
