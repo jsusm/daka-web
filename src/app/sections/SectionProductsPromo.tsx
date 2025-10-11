@@ -42,7 +42,7 @@ export function ProductCard({ product }: { product: Product }) {
     <motion.div
       variants={productVariant}
       viewport={{ once: true }}
-      className="overflow-hidden font-sans rounded-xl bg-white hover:shadow-lg group"
+      className="overflow-hidden font-sans rounded-xl bg-white hover:shadow-lg group shadow"
     >
       <div className="relative w-full h-64">
         <img className="object-cover w-full h-full rounded-xl group-hover:scale-105 transition-all" src={`https://tiendasdaka.com/img/producto/${product.sap}.webp`} alt={product.descripcion} />

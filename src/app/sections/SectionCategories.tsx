@@ -54,7 +54,7 @@ export default function SectionCategories() {
         variants={enterVariant}
         initial='hidden'
         whileInView='visible'
-        viewport={{ once: true, amount: 0.8 }}
+        viewport={{ once: true }}
         className="max-w-6xl mx-auto px-4 space-y-8">
         <SectionTitle>
           <SectionTitleLabel>Consulta Nuestas Categorias</SectionTitleLabel>
